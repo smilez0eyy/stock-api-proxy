@@ -1,9 +1,9 @@
 const FINNHUB_KEY = process.env.FINNHUB_API_KEY;
 
 export default async function handler(req, res) {
-  // CORS 헤더 추가 (중요!)
-  res.setHeader('Access-Control-Allow-Origin', 'https://claude.ai');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  // CORS - 모든 도메인 허용 (야생카드 *)
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   
   if (req.method === 'OPTIONS') {
